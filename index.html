@@ -6,15 +6,13 @@
     <title>Simulator Vibes Static Mobile Web App Information</title>
 </head>
 <body>
-    <div id="content"></div>
-
     <script>
         // Используем Fetch API для загрузки содержимого файла
         fetch('static.txt')
             .then(response => response.text())
             .then(data => {
                 // Выводим содержимое файла на странице
-                document.getElementById('content').innerText = data;
+                document.write(data);
             })
             .catch(error => console.error('Ошибка загрузки файла:', error));
     </script>
