@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static File Viewer</title>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        // Используем Fetch API для загрузки содержимого файла
+        fetch('static.txt')
+            .then(response => response.text())
+            .then(data => {
+                // Выводим содержимое файла на странице
+                document.getElementById('content').innerText = data;
+            })
+            .catch(error => console.error('Ошибка загрузки файла:', error));
+    </script>
+</body>
+</html>
